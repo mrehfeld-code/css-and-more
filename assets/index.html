@@ -5,7 +5,7 @@
       (async () => {
         const response = await fetch('https://api.github.com/repos/mrehfeld-code/css-and-more/contents/assets/');
         const data = await response.json();
-        let htmlString = '<table><tr><th>Name</th><th>Size</th></tr></table>';
+        let htmlString = '<table><tr><th>Name</th><th>Size</th></tr>';
         for (let file of data) {
           htmlString += `<tr><td><a href="${file.path}">${file.name}</a></td><td>"§{file.size}"</td></tr>`;
         }
