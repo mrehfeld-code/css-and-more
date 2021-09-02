@@ -9,7 +9,7 @@
         for (let file of data) {
           htmlString += `<tr><td><a href="${file.path}">${file.name}</a></td><td>§{file.size}</td></tr>`;
         }
-        htmlString += '</ul>';
+        htmlString += '</table>';
         document.getElementsByTagName('body')[0].innerHTML = htmlString;  
       })() 
     </script>
