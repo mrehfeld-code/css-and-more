@@ -7,7 +7,7 @@
         const data = await response.json();
         let htmlString = '<table>\n<tr>\n<th>Name</th>\n<th>Size</th>\n</tr>';
         for (let file of data) {
-          htmlString += `<tr>\n<td><a href="${file.path}">${file.name}</a></td>\n<td>§{file.size}</td>\n</tr>`;
+          htmlString += `<tr>\n<td><a href="${file.path}">${file.name}</a></td>\n<td>${file.size}</td>\n</tr>`;
         }
         htmlString += '</table>';
         document.getElementsByTagName('body')[0].innerHTML = htmlString;  
